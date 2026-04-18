@@ -1,0 +1,38 @@
+security:
+    password_hashers:
+        App\Entity\User:
+            algorithm: bcrypt
+            cost: 10
+
+    providers:
+        app_user_provider:
+            entity:
+                class: App\Entity\User
+                property: name
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        api:
+            pattern: ^/api
+            stateless: true
+            provider: app_user_provider
+            json_login:
+                check_path: /api/auth/login
+                username_path: name
+                password_path: password
+                success_handler: lexik_jwt_authentication.handler.authentication_success
+                failure_handler: lexik_jwt_authentication.handler.authentication_failure
+            jwt: ~
+
+    access_control:
+        - { path: ^/api/doc,           roles: PUBLIC_ACCESS }
+        - { path: ^/api/auth/login,    roles: PUBLIC_ACCESS }
+        - { path: ^/api/auth/register, roles: PUBLIC_ACCESS }
+        - { path: ^/api/announces,     roles: PUBLIC_ACCESS, methods: [GET] }
+        - { path: ^/api/cities,        roles: PUBLIC_ACCESS, methods: [GET] }
+        - { path: ^/api/categories,    roles: PUBLIC_ACCESS, methods: [GET] }
+        - { path: ^/api/users,         roles: PUBLIC_ACCESS, methods: [GET] }
+        - { path: ^/api,               roles: IS_AUTHENTICATED_FULLY }

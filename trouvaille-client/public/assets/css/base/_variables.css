@@ -1,0 +1,71 @@
+:root {
+  --color-bg:          #ffffff;
+  --color-surface:     #f7f7f7;
+  --color-border:      #e2e2e2;
+  --color-border-dark: #c4c4c4;
+
+  --color-text:        #111111;
+  --color-text-muted:  #6b6b6b;
+  --color-text-light:  #9a9a9a;
+
+  --color-accent:      #111111;
+  --color-accent-hover:#000000;
+
+  --color-success:     #1e6e45;
+  --color-success-bg:  #edf6f0;
+  --color-danger:      #c0392b;
+  --color-danger-bg:   #fdf0ef;
+  --color-warning:     #9a6200;
+  --color-warning-bg:  #fdf6e3;
+  --color-info:        #1a5f8c;
+  --color-info-bg:     #edf4fb;
+
+  --font:              'Poppins', sans-serif;
+
+  --text-xs:           0.72rem;
+  --text-sm:           0.825rem;
+  --text-base:         0.9375rem;
+  --text-md:           1.0625rem;
+  --text-lg:           1.25rem;
+  --text-xl:           1.5625rem;
+  --text-2xl:          2rem;
+  --text-3xl:          2.75rem;
+  --text-4xl:          3.75rem;
+
+  --weight-regular:    400;
+  --weight-medium:     500;
+  --weight-semibold:   600;
+  --weight-bold:       700;
+  --weight-extrabold:  800;
+
+  --line-height:       1.65;
+  --line-height-tight: 1.2;
+
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+
+  --radius-sm:   2px;
+  --radius:      4px;
+  --radius-md:   6px;
+  --radius-lg:   8px;
+  --radius-full: 9999px;
+
+  --shadow-xs:  0 1px 2px rgba(0,0,0,0.06);
+  --shadow-sm:  0 1px 4px rgba(0,0,0,0.08);
+  --shadow-md:  0 4px 12px rgba(0,0,0,0.08);
+
+  --transition:    0.15s ease;
+  --transition-md: 0.25s ease;
+
+  --navbar-height: 60px;
+  --container-max: 1200px;
+}

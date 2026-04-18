@@ -1,0 +1,184 @@
+/* =====================================================
+   PROFIL
+   ===================================================== */
+
+.profile-section {
+  padding: var(--space-10) 0 var(--space-16);
+}
+
+/* ── Layout deux colonnes ── */
+.profile-layout {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+/* ── Sidebar sticky ── */
+.profile-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  position: sticky;
+  top: calc(var(--navbar-height) + var(--space-5));
+}
+
+/* ── Cards principales ── */
+.profile-card {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-6);
+  margin-bottom: var(--space-5);
+}
+
+.profile-card:last-child { margin-bottom: 0; }
+
+.profile-card__header { margin-bottom: var(--space-5); }
+
+.profile-card__title {
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-1);
+}
+
+.profile-card__title i {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.profile-card__subtitle {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+/* ── Champ mot de passe avec toggle ── */
+.pwd-field {
+  position: relative;
+}
+
+.pwd-field .form-control {
+  padding-right: 2.75rem;
+}
+
+.pwd-toggle {
+  position: absolute;
+  right: var(--space-3);
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--color-text-light);
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 0;
+  transition: color var(--transition);
+  line-height: 1;
+}
+
+.pwd-toggle:hover { color: var(--color-text-muted); }
+
+/* ── Sidebar : carte identité ── */
+.profile-identity-card {
+  text-align: center;
+}
+
+.profile-identity__avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-lg);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-muted);
+  margin: 0 auto var(--space-3);
+}
+
+.profile-identity__name {
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+  color: var(--color-text);
+  margin: 0 0 var(--space-1);
+}
+
+.profile-identity__handle {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  margin: 0 0 var(--space-4);
+}
+
+.profile-identity__bio {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin: 0 0 var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  text-align: left;
+}
+
+.profile-identity__meta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  font-size: var(--text-xs);
+  color: var(--color-text-light);
+}
+
+.profile-identity__meta i { margin-right: var(--space-1); }
+
+/* ── Sidebar : liens rapides ── */
+.profile-quick-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+/* ── Responsive ── */
+@media (max-width: 991.98px) {
+  .profile-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-sidebar {
+    position: static;
+    /* Sidebar remontée avant le main sur mobile */
+    order: -1;
+  }
+
+  .profile-identity-card {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    text-align: left;
+  }
+
+  .profile-identity__avatar {
+    margin: 0;
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    font-size: var(--text-base);
+  }
+
+  .profile-identity__bio,
+  .profile-identity__meta {
+    display: none;
+  }
+
+  .profile-identity__handle {
+    margin-bottom: 0;
+  }
+}
