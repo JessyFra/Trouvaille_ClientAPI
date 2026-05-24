@@ -100,7 +100,7 @@ Le client ne contient **aucune logique métier** : il se contente d'appeler l'AP
 
 ```bash
 git clone https://github.com/JessyFra/Trouvaille_ClientAPI.git
-cd Trouvaille
+cd Trouvaille_ClientAPI
 ```
 
 ---
