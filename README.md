@@ -1,7 +1,7 @@
 # 📢 Trouvaille
 
 > Site de petites annonces entre particuliers
-Projet scolaire réalisé en PHP / Symfony / Bootstrap.
+> Projet scolaire réalisé en PHP / Symfony / Bootstrap.
 
 ---
 
